@@ -6,11 +6,7 @@ public class TaskView {
         this.viewModel = viewModel;
     }
 
-    public void showTask(){
-        System.out.println("task: "+ viewModel.getTitle());
-        System.out.println("description: "+ viewModel.getDescription());
-        System.out.println("status: "+(viewModel.isCompleted() ? "completed" : "not completed"));
-    }
+
 
     public void menu() {
         System.out.println("1.new task");
@@ -27,13 +23,15 @@ public class TaskView {
 
             switch (option) {
                 case 1:
+                    System.out.println("Enter type of a task");
+                    String type = sc.nextLine();
                     System.out.println("Enter title for a task");
                     String title = sc.nextLine();
                     System.out.println("Enter description");
                     String description = sc.nextLine();
                     System.out.println("Enter status: true is completed and false is not");
                     boolean isCompleted = sc.nextBoolean();
-                    viewModel.createTask(title, description, isCompleted);
+                    viewModel.createTask(type, title, description, isCompleted);
                     break;
                 case 2:
                     viewModel.getTasks();

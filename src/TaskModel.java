@@ -1,12 +1,14 @@
 public class TaskModel {
-    public String title;
-    public String description;
-    public boolean isCompleted;
+    private String type;
+    private String title;
+    private String description;
+    private boolean isCompleted;
 
-    public TaskModel(String title){
+    public TaskModel(String type, String title, String description, boolean isCompleted){
+        this.type = type;
         this.title = title;
         this.description = description;
-        this.isCompleted = false;
+        this.isCompleted = isCompleted;
     }
 
     public String getTitle() {
@@ -28,6 +30,7 @@ public class TaskModel {
         isCompleted = completed;
     }
 
-
-
+    public String getType() {
+        return type;
+    }
 }
