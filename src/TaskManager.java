@@ -1,8 +1,8 @@
 public class TaskManager {
-    TaskView view = new TaskView(new TaskViewModel());
+    private static TaskView view;
     private static TaskManager instance;
     private TaskManager() {
-
+        view = new TaskView(new TaskViewModel());
     }
 
     public static TaskManager getInstance() {
@@ -10,5 +10,8 @@ public class TaskManager {
             instance = new TaskManager();
         }
         return instance;
+    }
+    public static void run() {
+        view.run();
     }
 }
