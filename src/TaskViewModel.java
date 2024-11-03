@@ -36,10 +36,12 @@ public class TaskViewModel {
     }
 
     public TaskComponent getTask(int index) {
-        return tasks.get(index);
+        if(tasks.isEmpty() || index >= tasks.size() || index < 0) return null;
+        else return tasks.get(index);
     }
 
     public void updateTask(int index, TaskComponent updatedTask) {
-        tasks.set(index, updatedTask);
+        if(tasks.isEmpty() || index >= tasks.size() || index < 0) System.out.println("invalid index");
+        else tasks.set(index, updatedTask);
     }
 }
