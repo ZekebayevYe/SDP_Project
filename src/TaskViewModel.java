@@ -1,7 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class TaskViewModel {
     public TaskModel task;
-    public TaskViewModel(TaskModel task){
-        this.task = task;
+    private List<TaskModel> tasks;
+    public TaskViewModel(){
+        tasks = new ArrayList<>();
+    }
+
+    public void createTask(String title, String description, boolean isCompleted) {
+        TaskModel task = new TaskModel(title);
+        task.setDescription(description);
+        task.setCompleted(isCompleted);
+        tasks.add(task);
+     }
+
+     public void getTasks() {
+        for (TaskModel task : tasks) {
+            showTask(task);
+        }
+     }
+
+     public void showTask(TaskModel task) {
+         System.out.println(task.getTitle());
+         System.out.println(task.getDescription());
+         System.out.println(task.isCompleted());
     }
 
     public String getTitle() {
