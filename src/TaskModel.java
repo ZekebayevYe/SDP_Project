@@ -1,48 +1,61 @@
-public class TaskModel implements TaskComponent {
-    private String type;
+public class TaskModel extends Subject implements TaskComponent {
     private String title;
     private String description;
     private boolean isCompleted;
+    private String type;
 
-    public TaskModel(String type, String title, String description, boolean isCompleted){
+    public TaskModel(String title, String description) {
+        this.title = title;
+        this.description = description;
+        this.isCompleted = false;
+        this.type = "Default";
+    }
+
+    public TaskModel(String type, String title, String description, boolean isCompleted) {
         this.type = type;
         this.title = title;
         this.description = description;
         this.isCompleted = isCompleted;
     }
 
-    @Override
+    public String getType() {
+        return type;
+    }
+
     public String getTitle() {
         return title;
     }
 
-    @Override
+    public void setTitle(String title) {
+        this.title = title;
+        notifyObservers("Title updated to: " + title);
+    }
+
     public String getDescription() {
         return description;
     }
 
-    @Override
+    public void setDescription(String description) {
+        this.description = description;
+        notifyObservers("Description updated to: " + description);
+    }
+
     public boolean isCompleted() {
         return isCompleted;
     }
 
-    @Override
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Override
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
     public void setCompleted(boolean completed) {
-        this.isCompleted = completed;
+        isCompleted = completed;
+        notifyObservers("Task completion status updated.");
     }
 
-    public String getType() {
-        return type;
+    @Override
+    public String toString() {
+        return "TaskModel{" +
+                "type='" + type + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", isCompleted=" + isCompleted +
+                '}';
     }
 }
-
