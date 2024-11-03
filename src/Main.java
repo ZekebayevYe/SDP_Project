@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        TaskView view = new TaskView(TaskViewModel.getInstance());
+        TaskView view = new TaskView(new TaskFacade());
         view.run();
 
     }

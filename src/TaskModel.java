@@ -1,4 +1,4 @@
-public class TaskModel {
+public class TaskModel implements TaskComponent {
     private String type;
     private String title;
     private String description;
@@ -11,26 +11,38 @@ public class TaskModel {
         this.isCompleted = isCompleted;
     }
 
+    @Override
     public String getTitle() {
         return title;
     }
+
+    @Override
     public String getDescription() {
         return description;
     }
+
+    @Override
     public boolean isCompleted() {
         return isCompleted;
     }
+
+    @Override
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
     public void setCompleted(boolean completed) {
-        isCompleted = completed;
+        this.isCompleted = completed;
     }
 
     public String getType() {
         return type;
     }
 }
+
