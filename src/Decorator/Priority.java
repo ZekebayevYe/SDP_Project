@@ -1,3 +1,6 @@
+package Decorator;
+import Facade.TaskComponent;
+
 public class Priority extends TaskDecorator {
     private String priority;
 
@@ -16,6 +19,6 @@ public class Priority extends TaskDecorator {
 
     @Override
     public String getDescription() {
-        return super.getDescription() + " (Priority: " + priority + ")";
+        return super.getDescription() + " (Decorator.Priority: " + priority + ")";
     }
 }

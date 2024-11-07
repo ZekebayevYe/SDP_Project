@@ -1,3 +1,7 @@
+package MVVM;
+import Observer.Subject;
+import Facade.TaskComponent;
+
 public class TaskModel extends Subject implements TaskComponent {
     private String title;
     private String description;
@@ -51,7 +55,7 @@ public class TaskModel extends Subject implements TaskComponent {
 
     @Override
     public String toString() {
-        return "TaskModel{" +
+        return "MVVM.TaskModel{" +
                 "type='" + type + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +

@@ -1,3 +1,7 @@
+package Factory;
+
+import MVVM.TaskModel;
+
 public class TaskFactory {
     public static TaskModel createTask(String type, String title, String description, boolean isCompleted) {
         TaskModel task;

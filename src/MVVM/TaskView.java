@@ -1,3 +1,9 @@
+package MVVM;
+import Command.EditTaskCommand;
+import Command.Command;
+import Facade.TaskComponent;
+import Facade.TaskFacade;
+import Observer.Observer;
 import java.util.Scanner;
 
 public class TaskView implements Observer {

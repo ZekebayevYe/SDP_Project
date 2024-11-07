@@ -1,3 +1,7 @@
+package Command;
+
+import MVVM.TaskModel;
+
 public class EditTaskCommand implements Command {
     private TaskModel task;
     private String newTitle;

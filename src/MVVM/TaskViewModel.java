@@ -1,5 +1,9 @@
+package MVVM;
+import Facade.TaskComponent;
+import Observer.Observer;
 import java.util.ArrayList;
 import java.util.List;
+import Factory.TaskFactory;
 
 public class TaskViewModel {
     private static TaskViewModel instance;

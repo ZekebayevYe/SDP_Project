@@ -1,3 +1,9 @@
+package Facade;
+
+import Decorator.Priority;
+import Decorator.Reminder;
+import MVVM.TaskViewModel;
+import Facade.TaskComponent;
 
 public class TaskFacade {
     private TaskViewModel taskViewModel;

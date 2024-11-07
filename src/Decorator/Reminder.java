@@ -1,3 +1,5 @@
+package Decorator;
+import Facade.TaskComponent;
 
 
 public class Reminder extends TaskDecorator {
@@ -18,6 +20,6 @@ public class Reminder extends TaskDecorator {
 
     @Override
     public String getDescription() {
-        return super.getDescription() + " (Reminder: " + reminderTime + ")";
+        return super.getDescription() + " (Decorator.Reminder: " + reminderTime + ")";
     }
 }
