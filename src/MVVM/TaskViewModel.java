@@ -1,5 +1,5 @@
 package MVVM;
-import Facade.TaskComponent;
+import Decorator.TaskComponent;
 import Observer.Observer;
 import java.util.ArrayList;
 import java.util.List;

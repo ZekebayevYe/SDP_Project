@@ -1,5 +1,4 @@
 package Decorator;
-import Facade.TaskComponent;
 
 public class Priority extends TaskDecorator {
     private String priority;

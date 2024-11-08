@@ -1,4 +1,4 @@
-package Facade;
+package Decorator;
 
 public interface TaskComponent {
     String getType();

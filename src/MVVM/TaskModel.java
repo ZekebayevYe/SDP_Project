@@ -1,6 +1,6 @@
 package MVVM;
 import Observer.Subject;
-import Facade.TaskComponent;
+import Decorator.TaskComponent;
 
 public class TaskModel extends Subject implements TaskComponent {
     private String title;

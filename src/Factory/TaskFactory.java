@@ -19,18 +19,18 @@ public class TaskFactory {
     }
 }
 
-class WorkTask extends TaskModel {
+class WorkTask extends TaskModel implements TaskInterface {
     public WorkTask(String type, String title, String description, boolean isCompleted) {
         super(type, title, description, isCompleted);
     }
 }
 
-class ChoreTask extends TaskModel {
+class ChoreTask extends TaskModel implements TaskInterface {
     public ChoreTask(String type, String title, String description, boolean isCompleted) {
         super(type, title, description, isCompleted);
     }
 }
-class otherTask extends TaskModel {
+class otherTask extends TaskModel  implements TaskInterface{
     public otherTask(String type, String title, String description, boolean isCompleted) {
         super(type, title, description, isCompleted);
     }

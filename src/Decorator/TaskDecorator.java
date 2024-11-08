@@ -1,5 +1,4 @@
 package Decorator;
-import Facade.TaskComponent;
 
 public abstract class TaskDecorator implements TaskComponent {
     protected TaskComponent task;
